@@ -1,0 +1,468 @@
+/* General Rules */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%; /* Para que 1rem = 10px */
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: #FAF3EB;
+    background-color: #0E0E10;
+}
+
+h1, h2 {
+    font-family: 'EB Garamond', serif;
+    color: #E0B0FF;
+}
+
+h3, h4, h5, h6 {
+    font-family: 'Inter', sans-serif;
+    color: #E0B0FF;
+}
+
+header, footer {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.hero, .diferente, .fin{
+    background-color: #0E0E10;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+#logo, .logo-herramientas, .proyecto, .logo-contacto {
+    box-sizing: border-box;
+}
+
+.nav-derecha {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    background-color: #f9f9f9;
+    padding: 2rem;
+    border-left: 2px solid #ddd;
+  }
+  
+  .nav-derecha ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .nav-derecha li {
+    margin-bottom: 1rem;
+    writing-mode: vertical-rl;
+    text-align: center;
+  }
+  
+  .nav-derecha a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+  }
+
+section {
+    background-color: #1A1A1D;
+    display: flex;
+    align-items: end;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.contenedor-secciones {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin: 2rem auto;
+    padding: 2rem;
+    max-width: 1200px;
+    border-radius: 1.5rem;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+}
+
+.tarjeta {
+    background-color: #1A1A1D;
+    border-radius: 2rem;
+    box-shadow: 0 0 2rem rgba(255, 255, 255, 0.05);
+    padding: 3rem;
+    margin: 4rem auto;
+    max-width: 90%;
+    width: 80rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tarjeta:hover {
+    transform: translateY(-0.5rem);
+    box-shadow: 0 0 3rem rgba(255, 255, 255, 0.1);
+}
+
+.tarjeta h3 {
+    align-self: flex-start;
+    text-align: right;
+}
+
+.tarjeta p {
+    text-align: right;
+    width: 100%;
+}
+
+.contenedor-herramientas, .contenedor-descripcion, .contenedor-contacto {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    border-radius: 1rem;
+}
+
+.habilidades ul {
+    list-style: circle;
+}
+
+.tarjeta-descripcion {
+    background-color: #1A1A1D;
+    border-radius: 2rem;
+    box-shadow: 0 0 2rem rgba(255, 255, 255, 0.05);
+    padding: 3rem;
+    margin: 4rem auto;
+    max-width: 50%;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+a {
+    text-decoration: none;
+    color: #FAF3EB;
+}
+
+a:hover {
+    color: #9EC6F3;
+}
+
+.descripcion h3, .descripcion p {
+    text-align: center;
+}
+
+.tarjeta-contacto {
+    background-color: #1A1A1D;
+    border-radius: 2rem;
+    box-shadow: 0 0 2rem rgba(255, 255, 255, 0.05);
+    padding: 3rem;
+    margin: 4rem auto;
+    max-width: 40%;
+    width: 80rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.fin p, .fin a {
+    text-align: center;
+    color: #FFD700;
+    font-size: 1.2rem;
+}
+
+
+/* Responisve Design para Teléfonos Pequeños (El más pequeño en mercado: 320px) */
+@media (min-width: 0px) and (max-width: 480px) {
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2, h3, h4, h5, h6 {
+        font-size: 1.8rem;
+    }
+
+    p, .habilidades ul, .descripcion h3, .descripcion p{
+        font-size: 1.2rem;
+    }
+
+    #logo, .logo-herramientas{
+        width: 5rem;
+        height: 5rem;
+        margin-top: 1rem;
+        margin-left: 1rem;
+    }
+
+    section {
+        margin: 1rem;
+    }
+
+    .contenedor-secciones {
+        flex-wrap: wrap;
+        gap: 0;
+    }
+
+    .contenedor-herramientas, .contenedor-descripcion, .contenedor-contacto {
+        gap: 4rem;
+        margin-top: 2rem;
+    }
+
+    .habilidades ul {
+        padding: 0;
+        text-align: left;
+    }
+
+    .habilidades li {
+        margin: 0.5rem 0;
+    }
+
+    .proyecto {
+        width: 100%;
+        height: 100%;
+        margin: 1rem
+    }
+
+    .logo-contacto {
+        width: 5rem;
+        height: 5rem;
+        margin-top: 1rem;
+        margin-left: 1rem;
+    }
+}
+
+/* Responsive Design para Teléfonos Estándar/Modernos */
+@media (min-width: 481px) and (max-width: 767px) {
+    h1 {
+        font-size: 3rem;
+    }
+    
+    h2, h3, h4, h5, h6 {
+        font-size: 2.8rem;
+    }
+
+    p, .habilidades ul, .descripcion h3, .descripcion p {
+        font-size: 1.6rem;
+    }
+
+    #logo, .logo-herramientas {
+        width: 8rem;
+        height: 8rem;
+        margin-top: 1rem;
+        margin-left: 1rem;
+    }
+
+    section {
+        margin: 1rem;
+    }
+
+    .contenedor-secciones {
+        flex-wrap: wrap;
+        gap: 0;
+    }
+
+    .contenedor-herramientas, .contenedor-descripcion, .contenedor-contacto {
+        gap: 4rem;
+        margin-top: 2rem;
+    }
+
+    .habilidades ul {
+        padding: 0;
+        text-align: left;
+    }
+
+    .habilidades li {
+        margin: 0.5rem 0;
+    }
+
+    .proyecto {
+        width: 100%;
+        height: 100%;
+        margin: 1rem;
+    }
+
+    .logo-contacto {
+        width: 5rem;
+        height: 5rem;
+        margin-top: 1rem;
+        margin-left: 1rem;
+    }
+}
+
+/* Responsive Design para Tabletas (Modo: Vertical/Horizontal) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    h1 {
+        font-size: 4.5rem;
+    }
+
+    h2, h3, h4, h5, h6 {
+        font-size: 4.3rem;
+    }
+    
+    p, .habilidades ul, .descripcion h3, .descripcion p {
+        font-size: 2rem;
+    }
+
+    #logo, .logo-herramientas {
+        width: 12rem;
+        height: 12rem;
+        margin-top: 1rem;
+        margin-left: 1rem;
+    }
+
+    section {
+        margin: 1rem;
+    }
+
+    .contenedor-herramientas, .contenedor-contacto {
+        gap: 4rem;
+        margin-top: 2rem;
+    }
+
+    .habilidades ul {
+        padding: 0;
+        text-align: left;
+    }
+
+    .habilidades li {
+        margin: 0.5rem 0;
+    }
+
+    .proyecto {
+        width: 100%;
+        height: 100%;
+        margin: 1rem
+    }
+
+    .logo-contacto {
+        width: 5rem;
+        height: 5rem;
+        margin-top: 1rem;
+        margin-left: 1rem;
+    }
+}
+
+/* Responsive Design para Laptops y Pantallas Medianas */
+@media (min-width: 1025px) and (max-width: 1439px) {
+    h1 {
+        font-size: 6rem;
+    }
+
+    h2, h3, h4, h5, h6 {
+        font-size: 5rem;
+    }
+
+    p, .habilidades ul, .descripcion h3, .descripcion p {
+        font-size: 2rem;
+    }
+    
+    #logo, .logo-herramientas {
+        width: 17rem;
+        height: 17rem;
+        margin-top: 1rem;
+        margin-left: 1rem;
+    }
+
+    section {
+        margin: 1rem;
+    }
+
+    .contenedor-herramientas, .contenedor-contacto {
+        gap: 4rem;
+        margin-top: 2rem;
+    }
+
+    .habilidades ul {
+        padding: 0;
+        text-align: left;
+    }
+
+    .habilidades li {
+        margin: 0.5rem 0;
+    }
+
+    .proyecto {
+        width: 100%;
+        height: 100%;
+        margin: 1rem
+    }
+
+    .logo-contacto {
+        width: 5rem;
+        height: 5rem;
+        margin-top: 1rem;
+        margin-left: 1rem;
+    }
+}
+
+/* Responsive Design para Pantallas Grandes y Monitores 4K */
+@media (min-width: 1440px) {
+    h1 {
+        font-size: 8rem;
+    }
+
+    h2, h3, h4, h5, h6 {
+        font-size: 5rem;
+    }
+    
+    p, .habilidades ul, .descripcion h3, .descripcion p {
+        font-size: 2rem;
+    }
+
+    #logo, .logo-herramientas {
+        width: 20rem;
+        height: 20rem;
+        margin-top: 1rem;
+        margin-left: 1rem;
+    }
+
+    section {
+        margin: 1rem;
+    }
+
+    .contenedor-herramientas, .contenedor-contacto {
+        gap: 4rem;
+        margin-top: 2rem;
+    }
+
+    .habilidades ul {
+        padding: 0;
+        text-align: left;
+    }
+
+    .habilidades li {
+        margin: 0.5rem 0;
+    }
+
+    .proyecto {
+        width: 100%;
+        height: 100%;
+        margin: 1rem
+    }
+
+    .logo-contacto {
+        width: 5rem;
+        height: 5rem;
+        margin-top: 1rem;
+        margin-left: 1rem;
+    }
+}
+/*
+    Manifiesto CSS:
+    Cada clase, cada selector... son oraciones estéticas hacia el equilibrio.
+    Que los kami nos vean con buenos ojos, y el código sea limpio como agua del Fuji.
+*/
